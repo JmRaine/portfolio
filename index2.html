@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f0f4f8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+     
+        .fcontainer {
+          background: white;
+          padding: 25px 30px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          width: 350px;
+        }
+     
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+     
+        .fgroup {
+          margin-bottom: 15px;
+        }
+     
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+     
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select {
+          width: 100%;
+          padding: 8px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+     
+        .gender {
+          display: flex;
+          gap: 10px;
+        }
+     
+        .fcheck {
+          margin-top: 10px;
+        }
+     
+        button {
+          width: 100%;
+          padding: 10px;
+          background-color: #007bff;
+          color: white;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      </style>
+      <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="fcontainer">
+        <h2>Register</h2>
+        <form id="registrationForm">
+          <div class="fgroup">
+            <label>Full Name</label>
+            <input type="text" id="fullname" required>
+          </div>
+     
+          <div class="fgroup">
+            <label>Email</label>
+            <input type="email" id="email" required>
+          </div>
+     
+          <div class="fgroup">
+            <label>Password</label>
+            <input type="password" id="password" required>
+          </div>
+     
+          <div class="fgroup">
+            <label>Phone Number</label>
+            <input type="number" id="phone" required>
+          </div>
+     
+          <div class="fgroup">
+            <label>Gender</label>
+            <div class="gender">
+              <label><input type="radio" name="gender" value="Male" required> Male</label>
+              <label><input type="radio" name="gender" value="Female" required> Female</label>
+            </div>
+          </div>
+     
+          <div class="fgroup">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+          </div>
+     
+          <div class="fgroup">
+            <label>Course/Program</label>
+            <select id="course" required>
+              <option value="">Select a course</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+     
+          <div class="fcheck">
+            <label>
+              <input type="checkbox" id="terms" required>
+              I accept the terms and conditions
+            </label>
+          </div>
+     
+          <button type="submit">Register</button>
+        </form>
+      </div>
+</body>
+</html>
